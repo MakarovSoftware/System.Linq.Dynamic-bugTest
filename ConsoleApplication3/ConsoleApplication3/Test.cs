@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.IO;
 using System.Linq;
 using System.Linq.Dynamic.Core;
 
@@ -41,7 +42,7 @@ namespace ConsoleApplication3
 			var sw = new Stopwatch();
 			long t = 0;
 			var rnd = new Random();
-			for (var i = 0; i < 10000; i++)
+			for (var i = 0; i < 100000; i++)
 			{
 				sw.Start();
 				Act(people, pets, toys, rnd);
@@ -61,11 +62,22 @@ namespace ConsoleApplication3
 			var petsQ = pets.AsQueryable().Where(string.Format("From<{0} AND Till>{1}", rnd.Next(0, 500), rnd.Next(500, 20000)));
 			var toyQ = toys.AsQueryable().Where(string.Format("From<{0} AND Till>{1}", rnd.Next(0, 500), rnd.Next(500, 20000)));
 
-			var q1 = petsQ.Join(toyQ, "new (Id as firstKey)", "new (PetId as firstKey)", "new (inner as toy, outer as pet)");
-			var q2 = peopleQ.Join(q1, "new (Id as firstKey)", "new (pet.OwnerId as firstKey)", "new (inner as pet, outer as person)")
-						.Select("new (person.Name as personName, pet.pet.Name as petName, pet.toy.Id as toyUid)");
+			var toy = GenerateName();
+			var pet = GenerateName();
+			var person = GenerateName();
+
+			var q1 = petsQ.Join(toyQ, "new (Id as firstKey)", "new (PetId as firstKey)", string.Format("new (inner as {0}, outer as {1})", toy, pet));
+			var q2 = peopleQ.Join(q1, "new (Id as firstKey)", string.Format("new ({0}.OwnerId as firstKey)", pet), string.Format("new (inner as {0}, outer as {1})", pet, person))
+						.Select(string.Format("new ({0}.Name as personName, {1}.{1}.Name as petName, {1}.{2}.Id as toyUid)", person, pet, toy));
 			var result = q2.ToDynamicArray();
 			return result;
+		}
+
+		private string GenerateName()
+		{
+			var name = Path.GetRandomFileName();
+			name = name.Substring(0, name.IndexOf('.'));
+			return "A" + name;
 		}
 	}
 }

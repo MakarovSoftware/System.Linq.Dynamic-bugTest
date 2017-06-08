@@ -7,3 +7,12 @@ h:\documents\visual studio 2015\Projects\ConsoleApplication3\ConsoleApplication3
 h:\documents\visual studio 2015\Projects\ConsoleApplication3\ConsoleApplication3\obj\Debug\ConsoleApplication3.csprojResolveAssemblyReference.cache
 h:\documents\visual studio 2015\Projects\ConsoleApplication3\ConsoleApplication3\obj\Debug\ConsoleApplication3.exe
 h:\documents\visual studio 2015\Projects\ConsoleApplication3\ConsoleApplication3\obj\Debug\ConsoleApplication3.pdb
+C:\Work\System.Linq.Dynamic-bugTest1\ConsoleApplication3\ConsoleApplication3\bin\Debug\ConsoleApplication3.exe.config
+C:\Work\System.Linq.Dynamic-bugTest1\ConsoleApplication3\ConsoleApplication3\obj\Debug\ConsoleApplication3.exe
+C:\Work\System.Linq.Dynamic-bugTest1\ConsoleApplication3\ConsoleApplication3\obj\Debug\ConsoleApplication3.pdb
+C:\Work\System.Linq.Dynamic-bugTest1\ConsoleApplication3\ConsoleApplication3\bin\Debug\ConsoleApplication3.exe
+C:\Work\System.Linq.Dynamic-bugTest1\ConsoleApplication3\ConsoleApplication3\bin\Debug\ConsoleApplication3.pdb
+C:\Work\System.Linq.Dynamic-bugTest1\ConsoleApplication3\ConsoleApplication3\bin\Debug\System.Linq.Dynamic.Core.dll
+C:\Work\System.Linq.Dynamic-bugTest1\ConsoleApplication3\ConsoleApplication3\bin\Debug\System.Linq.Dynamic.dll
+C:\Work\System.Linq.Dynamic-bugTest1\ConsoleApplication3\ConsoleApplication3\bin\Debug\System.Linq.Dynamic.Core.xml
+C:\Work\System.Linq.Dynamic-bugTest1\ConsoleApplication3\ConsoleApplication3\obj\Debug\ConsoleApplication3.csprojResolveAssemblyReference.cache

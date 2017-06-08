@@ -128,6 +128,15 @@
             </code>
             </example>
         </member>
+        <member name="M:System.Linq.Dynamic.Core.DynamicClassFactory.GenerateKey(System.Collections.Generic.IEnumerable{System.Linq.Dynamic.Core.DynamicProperty},System.Boolean)">
+            <summary>
+            Generates the key.
+            Anonymous classes are generics based. The generic classes are distinguished by number of parameters and name of parameters. The specific types of the parameters are the generic arguments.
+            </summary>
+            <param name="dynamicProperties">The dynamic propertys.</param>
+            <param name="createParameterCtor">if set to <c>true</c> [create parameter ctor].</param>
+            <returns></returns>
+        </member>
         <member name="T:System.Linq.Dynamic.Core.DynamicEnumerableExtensions">
             <summary>
             Define extensions on <see cref="T:System.Collections.IEnumerable"/>.
